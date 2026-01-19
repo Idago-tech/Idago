@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "group-functions",
@@ -73,7 +73,7 @@ export default {
     const metadata = await getGroupMetadata();
     if (metadata) {
       const creationDate = new Date(
-        metadata.creation * 1000
+        metadata.creation * 1000,
       ).toLocaleDateString("es-ES");
       const announce = metadata.announce ? "Sí" : "No";
       const restrict = metadata.restrict ? "Sí" : "No";
@@ -84,7 +84,7 @@ export default {
           `• Creado el: ${creationDate}\n` +
           `• Solo admins envían: ${announce}\n` +
           `• Aprobación para unirse: ${restrict}\n` +
-          `• Descripción: ${metadata.desc || "Sin descripción"}`
+          `• Descripción: ${metadata.desc || "Sin descripción"}`,
       );
     }
 
@@ -98,7 +98,7 @@ export default {
         "• `getGroupParticipants(remoteJid?)` - Lista de participantes\n" +
         "• `getGroupAdmins(remoteJid?)` - Lista de administradores\n\n" +
         "🔧 *Parámetro opcional:*\n" +
-        "• `remoteJid` - ID del grupo/conversación (si no se proporciona, usa el grupo actual)"
+        "• `remoteJid` - ID del grupo/conversación (si no se proporciona, usa el grupo actual)",
     );
   },
 };

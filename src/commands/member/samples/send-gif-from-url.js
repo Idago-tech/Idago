@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-gif-from-url",
@@ -20,7 +20,7 @@ export default {
     await delay(3000);
 
     await sendGifFromURL(
-      "https://api.spiderx.com.br/storage/samples/sample-video.mp4"
+      "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
     );
 
     await delay(3000);
@@ -31,7 +31,7 @@ export default {
 
     await sendGifFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
-      "¡GIF cargado desde una URL externa!"
+      "¡GIF cargado desde una URL externa!",
     );
 
     await delay(3000);
@@ -43,7 +43,7 @@ export default {
     await sendGifFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
       `¡Hola @${userJid.split("@")[0]}! ¡Mira qué genial este gif!`,
-      [userJid]
+      [userJid],
     );
 
     await delay(3000);
@@ -56,14 +56,14 @@ export default {
       "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
       "GIF sin respuesta",
       undefined,
-      false
+      false,
     );
 
     await delay(3000);
 
     await sendReply(
       "Para enviar imágenes desde archivo, usa la función sendGifFromURL(url, caption, [mentions], quoted).\n\n" +
-        "Esto es útil cuando tienes imágenes alojadas en línea u obtenidas de APIs."
+        "Esto es útil cuando tienes imágenes alojadas en línea u obtenidas de APIs.",
     );
 
     await delay(3000);
@@ -73,7 +73,7 @@ export default {
         "• Giphy: giphy.com\n" +
         "• Tenor: tenor.com\n" +
         "• APIs de GIFs online\n\n" +
-        "💡 *Consejo:* ¡Asegúrate de que la URL apunte directamente al archivo de video!"
+        "💡 *Consejo:* ¡Asegúrate de que la URL apunte directamente al archivo de video!",
     );
   },
 };

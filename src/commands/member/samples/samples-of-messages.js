@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "samples-of-messages",
@@ -18,7 +18,7 @@ export default {
 
     await sendReply(
       "*📚 EJEMPLOS DISPONIBLES*\n\n" +
-        "Usa los comandos a continuación para ver ejemplos prácticos de cómo usar mis comandos:"
+        "Usa los comandos a continuación para ver ejemplos prácticos de cómo usar mis comandos:",
     );
 
     await delay(2000);
@@ -27,7 +27,7 @@ export default {
       "*🔊 AUDIO:*\n" +
         `• \`${PREFIX}send-audio-from-file\` - Enviar audio desde archivo local\n` +
         `• \`${PREFIX}send-audio-from-url\` - Enviar audio desde URL\n` +
-        `• \`${PREFIX}send-audio-from-buffer\` - Enviar audio desde buffer`
+        `• \`${PREFIX}send-audio-from-buffer\` - Enviar audio desde buffer`,
     );
 
     await delay(2000);
@@ -36,7 +36,7 @@ export default {
       "*🖼️ IMAGEN:*\n" +
         `• \`${PREFIX}send-image-from-file\` - Enviar imagen desde archivo local\n` +
         `• \`${PREFIX}send-image-from-url\` - Enviar imagen desde URL\n` +
-        `• \`${PREFIX}send-image-from-buffer\` - Enviar imagen desde buffer`
+        `• \`${PREFIX}send-image-from-buffer\` - Enviar imagen desde buffer`,
     );
 
     await delay(2000);
@@ -45,7 +45,7 @@ export default {
       "*🎬 VIDEO:*\n" +
         `• \`${PREFIX}send-video-from-file\` - Enviar video desde archivo local\n` +
         `• \`${PREFIX}send-video-from-url\` - Enviar video desde URL\n` +
-        `• \`${PREFIX}send-video-from-buffer\` - Enviar video desde buffer`
+        `• \`${PREFIX}send-video-from-buffer\` - Enviar video desde buffer`,
     );
 
     await delay(2000);
@@ -54,7 +54,7 @@ export default {
       "*🎞️ GIF:*\n" +
         `• \`${PREFIX}send-gif-from-file\` - Enviar GIF desde archivo local\n` +
         `• \`${PREFIX}send-gif-from-url\` - Enviar GIF desde URL\n` +
-        `• \`${PREFIX}send-gif-from-buffer\` - Enviar GIF desde buffer`
+        `• \`${PREFIX}send-gif-from-buffer\` - Enviar GIF desde buffer`,
     );
 
     await delay(2000);
@@ -63,14 +63,14 @@ export default {
       "*🏷️ STICKER:*\n" +
         `• \`${PREFIX}send-sticker-from-file\` - Enviar sticker desde archivo local\n` +
         `• \`${PREFIX}send-sticker-from-url\` - Enviar sticker desde URL\n` +
-        `• \`${PREFIX}send-sticker-from-buffer\` - Enviar sticker desde buffer`
+        `• \`${PREFIX}send-sticker-from-buffer\` - Enviar sticker desde buffer`,
     );
 
     await delay(2000);
 
     await sendReply(
       "*📊 ENCUESTA:*\n" +
-        `• \`${PREFIX}send-poll\` - Enviar encuestas/votaciones (selección única o múltiple)`
+        `• \`${PREFIX}send-poll\` - Enviar encuestas/votaciones (selección única o múltiple)`,
     );
 
     await delay(2000);
@@ -79,7 +79,7 @@ export default {
       "*📄 DOCUMENTO:*\n" +
         `• \`${PREFIX}send-document-from-file\` - Enviar documento desde archivo local\n` +
         `• \`${PREFIX}send-document-from-url\` - Enviar documento desde URL\n` +
-        `• \`${PREFIX}send-document-from-buffer\` - Enviar documento desde buffer`
+        `• \`${PREFIX}send-document-from-buffer\` - Enviar documento desde buffer`,
     );
 
     await delay(2000);
@@ -88,7 +88,7 @@ export default {
       "*💬 TEXTO Y RESPUESTAS:*\n" +
         `• \`${PREFIX}send-text\` - Enviar texto (con/sin mención)\n` +
         `• \`${PREFIX}send-quoted\` - Responder mensajes (con/sin mención)\n` +
-        `• \`${PREFIX}send-reaction\` - Enviar reacciones (emojis)`
+        `• \`${PREFIX}send-reaction\` - Enviar reacciones (emojis)`,
     );
 
     await delay(2000);
@@ -98,7 +98,7 @@ export default {
         `• \`${PREFIX}get-group-data\` - Obtener datos del grupo (nombre, dueño, participantes)\n` +
         `• \`${PREFIX}get-message-data\` - Obtener metadatos del mensaje\n` +
         `• \`${PREFIX}group-functions\` - Funciones utilitarias de grupo (demostración)\n` +
-        `• \`${PREFIX}raw-message\` - Obtener datos brutos del mensaje`
+        `• \`${PREFIX}raw-message\` - Obtener datos brutos del mensaje`,
     );
 
     await delay(2000);
@@ -109,14 +109,14 @@ export default {
         "2️⃣ Observa el comportamiento práctico\n" +
         "3️⃣ Revisa el código fuente en `/src/commands/member/exemplos/`\n" +
         "4️⃣ Úsalo como base para tus propios comandos\n\n" +
-        "*💡 Consejo:* ¡Todos los ejemplos incluyen explicaciones detalladas y casos de uso!"
+        "*💡 Consejo:* ¡Todos los ejemplos incluyen explicaciones detalladas y casos de uso!",
     );
 
     await delay(2000);
 
     await sendReply(
       "*📝 FUNCIONES DISPONIBLES:*\n\n" +
-        "¡Consulta el archivo `@types/index.d.ts` para la documentación completa de todas las funciones disponibles con ejemplos de código!"
+        "¡Consulta el archivo `@types/index.d.ts` para la documentación completa de todas las funciones disponibles con ejemplos de código!",
     );
   },
 };

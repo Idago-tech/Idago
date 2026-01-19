@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-video-from-url",
@@ -20,7 +20,7 @@ export default {
     await delay(3000);
 
     await sendVideoFromURL(
-      "https://api.spiderx.com.br/storage/samples/sample-video.mp4"
+      "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
     );
 
     await delay(3000);
@@ -32,7 +32,7 @@ export default {
     await sendVideoFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
       null,
-      false
+      false,
     );
 
     await delay(3000);
@@ -43,7 +43,7 @@ export default {
 
     await sendVideoFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
-      "¡Aquí está el video que pediste!"
+      "¡Aquí está el video que pediste!",
     );
 
     await delay(3000);
@@ -55,20 +55,20 @@ export default {
     await sendVideoFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
       `¡Aquí está el video que pediste @${userJid.split("@")[0]}!`,
-      [userJid]
+      [userJid],
     );
 
     await delay(3000);
 
     await sendReply(
       "Para enviar videos desde URL, usa la función sendVideoFromURL(url, caption, [mentions], quoted).\n\n" +
-        "Esto es útil cuando tienes videos alojados en línea u obtenidos de APIs."
+        "Esto es útil cuando tienes videos alojados en línea u obtenidos de APIs.",
     );
 
     await delay(3000);
 
     await sendReply(
-      "💡 **Consejo:** Asegúrate de que la URL apunte a un archivo de video válido y accesible."
+      "💡 **Consejo:** Asegúrate de que la URL apunte a un archivo de video válido y accesible.",
     );
   },
 };

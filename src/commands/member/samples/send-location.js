@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-location",
@@ -32,7 +32,7 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "¡Usa la función `sendLocation(latitud, longitud)` para enviar una ubicación!"
+      "¡Usa la función `sendLocation(latitud, longitud)` para enviar una ubicación!",
     );
   },
 };

@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-reaction",
@@ -19,7 +19,7 @@ export default {
     sendWaitReact,
   }) => {
     await sendReply(
-      "Voy a demostrar diferentes tipos de reacciones disponibles:"
+      "Voy a demostrar diferentes tipos de reacciones disponibles:",
     );
 
     await delay(2000);
@@ -68,7 +68,7 @@ export default {
         "• `sendErrorReact()` - Reacción de error (❌)\n" +
         "• `sendWarningReact()` - Reacción de advertencia (⚠️)\n" +
         "• `sendWaitReact()` - Reacción de espera (⏳)\n\n" +
-        "¡Las reacciones son útiles para dar retroalimentación rápida al usuario!"
+        "¡Las reacciones son útiles para dar retroalimentación rápida al usuario!",
     );
   },
 };

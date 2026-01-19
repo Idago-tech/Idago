@@ -1,7 +1,7 @@
-import { PREFIX, ASSETS_DIR } from "../../../config.js";
 import { delay } from "baileys";
 import fs from "node:fs";
 import path from "node:path";
+import { ASSETS_DIR, PREFIX } from "../../../config.js";
 import { getBuffer } from "../../../utils/index.js";
 
 export default {
@@ -19,34 +19,34 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "Voy a enviar un audio desde un buffer extraído de una URL, lo enviaré como reproducción de archivo."
+      "Voy a enviar un audio desde un buffer extraído de una URL, lo enviaré como reproducción de archivo.",
     );
 
     await delay(3000);
 
     await sendAudioFromBuffer(
       await getBuffer(
-        "https://api.spiderx.com.br/storage/samples/sample-audio.mp3"
-      )
+        "https://api.spiderx.com.br/storage/samples/sample-audio.mp3",
+      ),
     );
 
     await delay(3000);
 
     await sendReply(
-      "Ahora enviaré un audio desde un buffer extraído de un archivo, pero como si yo hubiera grabado el audio."
+      "Ahora enviaré un audio desde un buffer extraído de un archivo, pero como si yo hubiera grabado el audio.",
     );
 
     await delay(3000);
 
     await sendAudioFromBuffer(
       fs.readFileSync(path.join(ASSETS_DIR, "samples", "sample-audio.mp3")),
-      true
+      true,
     );
 
     await delay(3000);
 
     await sendReply(
-      "Ahora enviaré un audio desde un buffer extraído de un archivo, pero sin mencionar encima de tu mensaje."
+      "Ahora enviaré un audio desde un buffer extraído de un archivo, pero sin mencionar encima de tu mensaje.",
     );
 
     await delay(3000);
@@ -54,23 +54,23 @@ export default {
     await sendAudioFromBuffer(
       fs.readFileSync(path.join(ASSETS_DIR, "samples", "sample-audio.mp3")),
       false,
-      false
+      false,
     );
 
     await delay(3000);
 
     await sendReply(
-      "Y finalmente, enviaré un audio desde un buffer extraído de una URL, como si yo lo hubiera grabado, pero sin mencionar encima de tu mensaje."
+      "Y finalmente, enviaré un audio desde un buffer extraído de una URL, como si yo lo hubiera grabado, pero sin mencionar encima de tu mensaje.",
     );
 
     await delay(3000);
 
     await sendAudioFromBuffer(
       await getBuffer(
-        "https://api.spiderx.com.br/storage/samples/sample-audio.mp3"
+        "https://api.spiderx.com.br/storage/samples/sample-audio.mp3",
       ),
       true,
-      false
+      false,
     );
   },
 };

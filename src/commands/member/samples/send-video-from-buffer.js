@@ -1,7 +1,7 @@
-import { PREFIX, ASSETS_DIR } from "../../../config.js";
 import { delay } from "baileys";
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
+import { ASSETS_DIR, PREFIX } from "../../../config.js";
 import { getBuffer } from "../../../utils/index.js";
 
 export default {
@@ -23,12 +23,12 @@ export default {
     await delay(3000);
 
     const videoBuffer = fs.readFileSync(
-      path.join(ASSETS_DIR, "samples", "sample-video.mp4")
+      path.join(ASSETS_DIR, "samples", "sample-video.mp4"),
     );
 
     await sendVideoFromBuffer(
       videoBuffer,
-      "Aquí está el video del buffer local"
+      "Aquí está el video del buffer local",
     );
 
     await delay(3000);
@@ -38,12 +38,12 @@ export default {
     await delay(3000);
 
     const urlBuffer = await getBuffer(
-      "https://api.spiderx.com.br/storage/samples/sample-video.mp4"
+      "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
     );
 
     await sendVideoFromBuffer(
       urlBuffer,
-      "Aquí está el video del buffer de URL"
+      "Aquí está el video del buffer de URL",
     );
 
     await delay(3000);
@@ -57,24 +57,24 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "También videos de buffer con leyenda, mencionando al usuario:"
+      "También videos de buffer con leyenda, mencionando al usuario:",
     );
 
     await delay(3000);
 
     await sendVideoFromBuffer(
       await getBuffer(
-        "https://api.spiderx.com.br/storage/samples/sample-video.mp4"
+        "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
       ),
       `¡Aquí está el video que pediste @${userJid.split("@")[0]}!`,
-      [userJid]
+      [userJid],
     );
 
     await delay(3000);
 
     await sendReply(
       "Para enviar videos desde buffer, usa la función sendVideoFromBuffer(url, caption, [mentions], quoted).\n\n" +
-        "Esto es útil cuando tienes videos alojados en línea u obtenidos de APIs."
+        "Esto es útil cuando tienes videos alojados en línea u obtenidos de APIs.",
     );
   },
 };

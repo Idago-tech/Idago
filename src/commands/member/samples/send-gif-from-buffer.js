@@ -1,7 +1,7 @@
-import { PREFIX, ASSETS_DIR } from "../../../config.js";
 import { delay } from "baileys";
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
+import { ASSETS_DIR, PREFIX } from "../../../config.js";
 import { getBuffer } from "../../../utils/index.js";
 
 export default {
@@ -23,7 +23,7 @@ export default {
     await delay(3000);
 
     const fileBuffer = fs.readFileSync(
-      path.join(ASSETS_DIR, "samples", "sample-video.mp4")
+      path.join(ASSETS_DIR, "samples", "sample-video.mp4"),
     );
 
     await sendGifFromBuffer(fileBuffer);
@@ -35,7 +35,7 @@ export default {
     await delay(3000);
 
     const urlBuffer = await getBuffer(
-      "https://api.spiderx.com.br/storage/samples/sample-video.mp4"
+      "https://api.spiderx.com.br/storage/samples/sample-video.mp4",
     );
 
     await sendGifFromBuffer(urlBuffer, "¡GIF cargado de URL a buffer!");
@@ -49,7 +49,7 @@ export default {
     await sendGifFromBuffer(
       fileBuffer,
       `@${userJid.split("@")[0]} ¡este gif provino de un buffer!`,
-      [userJid]
+      [userJid],
     );
 
     await delay(3000);
@@ -62,14 +62,14 @@ export default {
       fileBuffer,
       "GIF de buffer sin respuesta",
       null,
-      false
+      false,
     );
 
     await delay(3000);
 
     await sendReply(
       "Para enviar imágenes desde archivo, usa la función sendGifFromBuffer(buffer, caption, [mentions], quoted).\n\n" +
-        "¡Esto es útil para gifs generados dinámicamente o convertidos de otros formatos!"
+        "¡Esto es útil para gifs generados dinámicamente o convertidos de otros formatos!",
     );
 
     await delay(3000);
@@ -80,7 +80,7 @@ export default {
         "• Conversión de formatos\n" +
         "• Manipulación de datos\n" +
         "• Caché temporal\n\n" +
-        "💡 *Consejo:* ¡Los buffers son útiles para GIFs generados dinámicamente o convertidos!"
+        "💡 *Consejo:* ¡Los buffers son útiles para GIFs generados dinámicamente o convertidos!",
     );
   },
 };

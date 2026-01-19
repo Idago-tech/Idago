@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "get-group-data",
@@ -48,7 +48,7 @@ export default {
 
 ⚙️ *Configuración:*
 • Creado el: ${new Date(groupMetadata.creation * 1000).toLocaleDateString(
-        "es-ES"
+        "es-ES",
       )}
 • Dueño: ${groupMetadata.owner || "N/A"}
 • Solo admins pueden enviar: ${groupMetadata.announce ? "Sí" : "No"}
@@ -68,7 +68,7 @@ export default {
               (admin, index) =>
                 `${index + 1}. @${admin.id.split("@")[0]} ${
                   admin.admin === "superadmin" ? "(Creador)" : "(Admin)"
-                }`
+                }`,
             )
             .join("\n");
 
@@ -85,11 +85,11 @@ export default {
           "• `socket.groupMetadata(jid) o getGroupMetadata()` - Obtiene metadatos del grupo\n" +
           "• `groupMetadata.participants` - Lista participantes\n" +
           "• `groupMetadata.subject` - Nombre del grupo\n" +
-          "• `groupMetadata.desc` - Descripción del grupo"
+          "• `groupMetadata.desc` - Descripción del grupo",
       );
     } catch (error) {
       await sendErrorReply(
-        `Error al obtener datos del grupo: ${error.message}`
+        `Error al obtener datos del grupo: ${error.message}`,
       );
     }
   },

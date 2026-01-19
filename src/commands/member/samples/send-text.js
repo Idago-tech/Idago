@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-text",
@@ -26,7 +26,7 @@ export default {
 
     await sendText(
       `¡Hola! Este mensaje te menciona: @${userJid.split("@")[0]}`,
-      [userJid]
+      [userJid],
     );
 
     await delay(3000);
@@ -36,7 +36,7 @@ export default {
     await delay(3000);
 
     await sendText(
-      "¡Puedes usar *negrita*, _cursiva_, ~tachado~ y ```código``` en el texto!"
+      "¡Puedes usar *negrita*, _cursiva_, ~tachado~ y ```código``` en el texto!",
     );
 
     await delay(3000);
@@ -45,7 +45,7 @@ export default {
       "📝 *Diferencias entre las funciones:*\n\n" +
         "• `sendText()` - Envía texto simple, con opción de mencionar usuarios\n" +
         "• `sendReply()` - Envía texto como respuesta al mensaje actual\n\n" +
-        "¡Ambas soportan el formato de WhatsApp!"
+        "¡Ambas soportan el formato de WhatsApp!",
     );
   },
 };

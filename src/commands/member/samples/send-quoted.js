@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-quoted",
@@ -24,7 +24,7 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "Voy a demostrar diferentes tipos de respuestas disponibles:"
+      "Voy a demostrar diferentes tipos de respuestas disponibles:",
     );
 
     await delay(3000);
@@ -56,7 +56,7 @@ export default {
         "• `sendErrorReply()` - Respuesta de error (con ❌)\n" +
         "• `sendWarningReply()` - Respuesta de advertencia (con ⚠️)\n" +
         "• `sendWaitReply()` - Respuesta de espera (con ⏳)\n\n" +
-        "¡Usa cada una según el contexto apropiado!"
+        "¡Usa cada una según el contexto apropiado!",
     );
   },
 };

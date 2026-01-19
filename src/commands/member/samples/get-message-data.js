@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 import { onlyNumbers } from "../../../utils/index.js";
 
 export default {
@@ -94,7 +94,7 @@ export default {
         isSticker: isAnalyzingReply
           ? getMediaType(targetMessage) && targetMessage.message.stickerMessage
           : isSticker,
-      }
+      },
     );
     const mediaInfo = getEnhancedMediaInfo(targetMessage, isAnalyzingReply);
     const messageFlags = getMessageFlags(targetMessage, isAnalyzingReply, {
@@ -119,7 +119,7 @@ export default {
 • Chat: \`${remoteJid}\`
 • ID del mensaje: \`${targetMessage.key?.id || "N/A"}\`
 • Marca de tiempo: ${new Date(
-      (targetMessage.messageTimestamp || 0) * 1000
+      (targetMessage.messageTimestamp || 0) * 1000,
     ).toLocaleString("es-ES")}
 
 📱 *Contexto:*
@@ -159,7 +159,7 @@ ${mediaInfo}
       try {
         const groupMetadata = await getGroupMetadata();
         const participant = groupMetadata?.participants?.find(
-          (p) => p.id === targetUserJid
+          (p) => p.id === targetUserJid,
         );
 
         const groupInfo = `👥 *Información del Grupo:*
@@ -202,7 +202,7 @@ ${mediaInfo}
 • Tipo del mensaje citado: ${getMessageType(targetMessage)}
 • Tiene multimedia: ${getMediaType(targetMessage) ? "Sí" : "No"}
 • Fecha del mensaje citado: ${new Date(
-        (targetMessage.messageTimestamp || 0) * 1000
+        (targetMessage.messageTimestamp || 0) * 1000,
       ).toLocaleString("es-ES")}`;
 
       await sendText(replyInfo, [replyJid]);
@@ -223,7 +223,7 @@ ${mediaInfo}
 🔄 *Experimenta:*
 • Responde un mensaje con este comando
 • Úsalo en diferentes tipos de medios
-• Prueba en grupos y conversaciones privadas`
+• Prueba en grupos y conversaciones privadas`,
     );
   },
 };
@@ -384,7 +384,7 @@ function getMessageFlags(message) {
     flags.push("💬 Con cita");
   if (msg.extendedTextMessage?.contextInfo?.mentionedJid?.length > 0) {
     flags.push(
-      `👥 ${msg.extendedTextMessage.contextInfo.mentionedJid.length} mención(es)`
+      `👥 ${msg.extendedTextMessage.contextInfo.mentionedJid.length} mención(es)`,
     );
   }
 

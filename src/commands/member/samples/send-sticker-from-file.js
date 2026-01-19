@@ -1,6 +1,6 @@
-import { PREFIX, ASSETS_DIR } from "../../../config.js";
 import { delay } from "baileys";
 import path from "node:path";
+import { ASSETS_DIR, PREFIX } from "../../../config.js";
 
 export default {
   name: "send-sticker-from-file",
@@ -21,7 +21,7 @@ export default {
     await delay(3000);
 
     await sendStickerFromFile(
-      path.join(ASSETS_DIR, "samples", "sample-sticker.webp")
+      path.join(ASSETS_DIR, "samples", "sample-sticker.webp"),
     );
 
     await delay(3000);
@@ -31,20 +31,20 @@ export default {
     await delay(3000);
 
     await sendStickerFromFile(
-      path.join(ASSETS_DIR, "samples", "sample-sticker.webp")
+      path.join(ASSETS_DIR, "samples", "sample-sticker.webp"),
     );
 
     await delay(3000);
 
     await sendReply(
       "Para enviar stickers desde archivo, usa la función sendStickerFromFile(filePath, quoted).\n\n" +
-        "Esto es útil cuando tienes stickers almacenados localmente en el servidor."
+        "Esto es útil cuando tienes stickers almacenados localmente en el servidor.",
     );
 
     await delay(3000);
 
     await sendReply(
-      "💡 **Consejo:** El formato ideal para stickers es .webp. Otros formatos pueden necesitar conversión."
+      "💡 **Consejo:** El formato ideal para stickers es .webp. Otros formatos pueden necesitar conversión.",
     );
   },
 };

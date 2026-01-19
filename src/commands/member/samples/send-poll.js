@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-poll",
@@ -22,7 +22,7 @@ export default {
         { optionName: "Opción 2" },
         { optionName: "Opción 3" },
       ],
-      true
+      true,
     );
 
     await delay(2000);
@@ -36,13 +36,13 @@ export default {
         { optionName: "Ensalada 🥗" },
         { optionName: "Helado 🍦" },
       ],
-      false
+      false,
     );
 
     await delay(2000);
 
     await sendReply(
-      "Puedes crear tus propias encuestas fácilmente usando la función sendPoll(title, options, singleChoice)."
+      "Puedes crear tus propias encuestas fácilmente usando la función sendPoll(title, options, singleChoice).",
     );
   },
 };

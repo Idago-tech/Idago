@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-contact",
@@ -24,7 +24,7 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "¡Usa la función `sendContact('+55 99 99999-9999', 'Nombre del contacto')` para enviar un contacto!"
+      "¡Usa la función `sendContact('+55 99 99999-9999', 'Nombre del contacto')` para enviar un contacto!",
     );
   },
 };

@@ -1,7 +1,7 @@
-import { PREFIX, ASSETS_DIR } from "../../../config.js";
 import { delay } from "baileys";
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
+import { ASSETS_DIR, PREFIX } from "../../../config.js";
 import { getBuffer } from "../../../utils/index.js";
 
 export default {
@@ -23,12 +23,12 @@ export default {
     await delay(3000);
 
     const imageBuffer = fs.readFileSync(
-      path.join(ASSETS_DIR, "samples", "sample-image.jpg")
+      path.join(ASSETS_DIR, "samples", "sample-image.jpg"),
     );
 
     await sendImageFromBuffer(
       imageBuffer,
-      "Esta es una imagen de un buffer de archivo local"
+      "Esta es una imagen de un buffer de archivo local",
     );
 
     await delay(3000);
@@ -38,12 +38,12 @@ export default {
     await delay(3000);
 
     const urlBuffer = await getBuffer(
-      "https://api.spiderx.com.br/storage/samples/sample-image.jpg"
+      "https://api.spiderx.com.br/storage/samples/sample-image.jpg",
     );
 
     await sendImageFromBuffer(
       urlBuffer,
-      "Esta es una imagen de un buffer de URL"
+      "Esta es una imagen de un buffer de URL",
     );
 
     await delay(3000);
@@ -63,14 +63,14 @@ export default {
     await sendImageFromBuffer(
       urlBuffer,
       `¡Aquí tienes la imagen @${userJid.split("@")[0]}!`,
-      [userJid]
+      [userJid],
     );
 
     await delay(3000);
 
     await sendReply(
       "Para enviar imágenes desde buffer, usa la función sendImageFromBuffer(buffer, caption, [mentions], quoted).\n\n" +
-        "Esto es útil cuando tienes imágenes procesadas en memoria o necesitas manipular la imagen antes de enviar."
+        "Esto es útil cuando tienes imágenes procesadas en memoria o necesitas manipular la imagen antes de enviar.",
     );
   },
 };

@@ -1,7 +1,7 @@
-import { PREFIX, ASSETS_DIR } from "../../../config.js";
 import { delay } from "baileys";
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
+import { ASSETS_DIR, PREFIX } from "../../../config.js";
 import { getBuffer } from "../../../utils/index.js";
 
 export default {
@@ -23,7 +23,7 @@ export default {
     await delay(3000);
 
     const stickerBuffer = fs.readFileSync(
-      path.join(ASSETS_DIR, "samples", "sample-sticker.webp")
+      path.join(ASSETS_DIR, "samples", "sample-sticker.webp"),
     );
 
     await sendStickerFromBuffer(stickerBuffer);
@@ -31,13 +31,13 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "Ahora voy a enviar un sticker desde un buffer de URL y sin mencionar el mensaje"
+      "Ahora voy a enviar un sticker desde un buffer de URL y sin mencionar el mensaje",
     );
 
     await delay(3000);
 
     const urlBuffer = await getBuffer(
-      "https://api.spiderx.com.br/storage/samples/sample-sticker.webp"
+      "https://api.spiderx.com.br/storage/samples/sample-sticker.webp",
     );
 
     await sendStickerFromBuffer(urlBuffer, false);
@@ -45,13 +45,13 @@ export default {
     await delay(3000);
 
     await sendReply(
-      "Para enviar stickers desde un buffer, usa la función sendStickerFromBuffer(buffer, quoted)."
+      "Para enviar stickers desde un buffer, usa la función sendStickerFromBuffer(buffer, quoted).",
     );
 
     await delay(3000);
 
     await sendReply(
-      "💡 **Consejo:** Los buffers son útiles para stickers generados dinámicamente o convertidos de otros formatos."
+      "💡 **Consejo:** Los buffers son útiles para stickers generados dinámicamente o convertidos de otros formatos.",
     );
   },
 };

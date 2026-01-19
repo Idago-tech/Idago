@@ -1,5 +1,5 @@
-import { PREFIX } from "../../../config.js";
 import { delay } from "baileys";
+import { PREFIX } from "../../../config.js";
 
 export default {
   name: "send-image-from-url",
@@ -21,7 +21,7 @@ export default {
 
     await sendImageFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-image.jpg",
-      "Esta es una leyenda para la imagen de la URL"
+      "Esta es una leyenda para la imagen de la URL",
     );
 
     await delay(3000);
@@ -31,7 +31,7 @@ export default {
     await delay(3000);
 
     await sendImageFromURL(
-      "https://api.spiderx.com.br/storage/samples/sample-image.jpg"
+      "https://api.spiderx.com.br/storage/samples/sample-image.jpg",
     );
 
     await delay(3000);
@@ -43,12 +43,12 @@ export default {
     await sendImageFromURL(
       "https://api.spiderx.com.br/storage/samples/sample-image.jpg",
       `¡Logo de Takeshi Bot para ti ${userJid.split("@")[0]}!`,
-      [userJid]
+      [userJid],
     );
 
     await sendReply(
       "Para enviar imágenes de URL, usa la función sendImageFromURL(url, caption, [mentions], quoted).\n\n" +
-        "Esto es útil cuando tienes imágenes alojadas en línea u obtenidas de APIs."
+        "Esto es útil cuando tienes imágenes alojadas en línea u obtenidas de APIs.",
     );
   },
 };
