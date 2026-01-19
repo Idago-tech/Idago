@@ -1,10 +1,10 @@
-const { PREFIX, ASSETS_DIR } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
-const path = require("node:path");
-const fs = require("node:fs");
-const { getBuffer } = require(`${BASE_DIR}/utils`);
+import { PREFIX, ASSETS_DIR } from "../../../config.js";
+import { delay } from "baileys";
+import path from "node:path";
+import fs from "node:fs";
+import { getBuffer } from "../../../utils/index.js";
 
-module.exports = {
+export default {
   name: "send-sticker-from-buffer",
   description: "Ejemplo de cómo enviar un sticker desde un buffer",
   commands: ["send-sticker-from-buffer"],

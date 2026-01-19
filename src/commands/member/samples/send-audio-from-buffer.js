@@ -1,10 +1,10 @@
-const { PREFIX, ASSETS_DIR } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
-const fs = require("node:fs");
-const path = require("node:path");
-const { getBuffer } = require(`${BASE_DIR}/utils`);
+import { PREFIX, ASSETS_DIR } from "../../../config.js";
+import { delay } from "baileys";
+import fs from "node:fs";
+import path from "node:path";
+import { getBuffer } from "../../../utils/index.js";
 
-module.exports = {
+export default {
   name: "send-audio-from-buffer",
   description: "Ejemplo de cómo enviar un audio a través de un buffer",
   commands: ["send-audio-from-buffer"],

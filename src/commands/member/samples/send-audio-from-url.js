@@ -1,7 +1,7 @@
-const { PREFIX } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
+import { PREFIX } from "../../../config.js";
+import { delay } from "baileys";
 
-module.exports = {
+export default {
   name: "send-audio-from-url",
   description: "Ejemplo de cómo enviar un audio a través de un enlace/url",
   commands: ["send-audio-from-url"],

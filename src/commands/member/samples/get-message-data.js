@@ -1,8 +1,8 @@
-const { PREFIX } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
-const { onlyNumbers } = require(`${BASE_DIR}/utils`);
+import { PREFIX } from "../../../config.js";
+import { delay } from "baileys";
+import { onlyNumbers } from "../../../utils/index.js";
 
-module.exports = {
+export default {
   name: "get-message-data",
   description:
     "Ejemplo avanzado de cómo obtener información detallada del mensaje actual o mensaje citado, incluyendo análisis de medios, menciones y metadatos técnicos",

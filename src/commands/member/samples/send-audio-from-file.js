@@ -1,7 +1,8 @@
-const { PREFIX, ASSETS_DIR } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
-const path = require("node:path");
-module.exports = {
+import { PREFIX, ASSETS_DIR } from "../../../config.js";
+import { delay } from "baileys";
+import path from "node:path";
+
+export default {
   name: "send-audio-from-file",
   description: "Ejemplo de cómo enviar un audio a través de un archivo",
   commands: ["send-audio-from-file"],

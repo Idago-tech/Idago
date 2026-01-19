@@ -1,7 +1,7 @@
-const { PREFIX } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
+import { PREFIX } from "../../../config.js";
+import { delay } from "baileys";
 
-module.exports = {
+export default {
   name: "send-video-from-url",
   description: "Ejemplo de cómo enviar un video desde una URL",
   commands: ["send-video-from-url"],

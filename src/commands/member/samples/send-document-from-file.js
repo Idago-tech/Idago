@@ -1,8 +1,8 @@
-const { PREFIX, ASSETS_DIR } = require(`${BASE_DIR}/config`);
-const { delay } = require("baileys");
-const path = require("node:path");
+import { PREFIX, ASSETS_DIR } from "../../../config.js";
+import { delay } from "baileys";
+import path from "node:path";
 
-module.exports = {
+export default {
   name: "send-document-from-file",
   description: "Ejemplo de cómo enviar documentos desde archivos locales",
   commands: ["send-document-from-file"],
