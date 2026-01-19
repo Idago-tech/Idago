@@ -7,8 +7,8 @@
 import { delay } from "baileys";
 import path from "node:path";
 import { ASSETS_DIR, PREFIX } from "../../../config.js";
-import { DangerError } from "../../errors/index.js";
-import { getRandomNumber } from "../../utils/index.js";
+import { DangerError } from "../../../errors/index.js";
+import { getRandomNumber } from "../../../utils/index.js";
 
 export default {
   name: "dado",
