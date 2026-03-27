@@ -11,7 +11,7 @@ export const PREFIX = "/";
 export const BOT_EMOJI = "🤖";
 
 // Nombre del bot (cámbielo si prefiere).
-export const BOT_NAME = "Takeshi Bot";
+export const BOT_NAME = "IDAGO BOT";
 
 // LID del bot.
 // Para obtener el LID del bot, use el comando <prefijo>lid respondiendo a un mensaje del número del bot.
@@ -48,7 +48,7 @@ export const SPIDER_API_TOKEN = "seu_token_aqui";
 export const LINKER_BASE_URL = "https://linker.devgui.dev/api";
 
 // Obtenga su clave en: https://linker.devgui.dev.
-export const LINKER_API_KEY = "seu_token_aqui";
+export const LINKER_API_KEY = "A22wXOK7";
 
 // Si desea responder solo a un grupo específico,
 // coloque el ID del mismo en la configuración de abajo.
