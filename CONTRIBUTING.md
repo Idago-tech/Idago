@@ -1,4 +1,4 @@
-# Contribuyendo con el Takeshi Bot
+# Contribuyendo con el TRC Bot
 
 ¡Gracias por querer ayudar! Para mantener el proyecto organizado, sigue esta guía rápida.
 
