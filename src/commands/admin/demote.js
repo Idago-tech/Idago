@@ -4,7 +4,7 @@ import { errorLog } from "../../utils/logger.js";
 
 export default {
   name: "rebaixar",
-  description: "Degrada a um administrador a miembro común",
+  description: "Degrada a un administrador a miembro común",
   commands: ["rebaixar", "rebaixa", "demote"],
   usage: `${PREFIX}rebaixar @usuario`,
   /**
