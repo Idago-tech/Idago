@@ -9,7 +9,7 @@ echo "====================================="
 echo ""
 
 if [ ! -d "assets" ]; then
-    echo "❌ Error: Debes ejecutar este script en el directorio raíz del Takeshi Bot"
+    echo "❌ Error: Debes ejecutar este script en el directorio raíz del Idago Bot"
     echo "   Asegúrate de estar en la carpeta donde están las carpetas 'assets' y 'src'"
     exit 1
 fi
