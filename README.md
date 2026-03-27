@@ -95,7 +95,7 @@ cd /sdcard
 4 - Clona el repositorio.
 
 ```sh
-git clone [https://github.com/Idago-tech/Idago]
+git clone [https://github.com/Idago-tech/Idago.git]
 ```
 
 5 - Entra en la carpeta que fue clonada.
