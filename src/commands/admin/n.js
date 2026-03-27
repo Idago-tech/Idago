@@ -1,9 +1,9 @@
 import { PREFIX } from "../../config.js";
 
 export default {
-  name: "hide-tag",
+  name: "notificar",
   description: "Menciona a todos",
-  commands: ["hide-tag", "to-tag"],
+  commands: ["notifi", "notificación", "notify", "n", "m", "invocar"],
   usage: `${PREFIX}hidetag motivo`,
   adminOnly: true,
   handle: async ({ fullArgs, sendText, socket, remoteJid, sendReact, webMessage }) => {
