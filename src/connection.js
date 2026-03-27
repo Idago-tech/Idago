@@ -87,7 +87,7 @@ export async function connect() {
     warningLog("¡Credenciales aún no configuradas!");
 
     infoLog(
-      'Ingrese el número de teléfono del bot (ejemplo: "5511920202020"):'
+      'Ingrese el número de teléfono del bot (ejemplo: "584120202020"):'
     );
 
     const phoneNumber = await question(
@@ -184,7 +184,7 @@ export async function connect() {
       infoLog("Versión de WhatsApp Web: " + WAWEB_VERSION.join("."));
       successLog(
         `✅ ¡Estoy listo para usar! 
-Verifica el prefijo escribiendo la palabra "prefixo" en WhatsApp. 
+Verifica el prefijo escribiendo la palabra "prefijo", "prefixo" en WhatsApp. 
 El prefijo por defecto definido en config.js es ${PREFIX}`
       );
       badMacHandler.resetErrorCount();
