@@ -4,7 +4,7 @@
 # Autor: Dev Gui
 # Versión: 0.9.0-BETA
 
-echo "🤖 Takeshi Bot - Reset de la Autenticación"
+echo "🤖 TRC Bot - Reset de la Autenticación"
 echo "====================================="
 echo ""
 
