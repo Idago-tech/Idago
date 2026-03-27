@@ -4,7 +4,7 @@ import { errorLog } from "../../utils/logger.js";
 export default {
   name: "open",
   description: "Abre el grupo.",
-  commands: ["open", "open-group"],
+  commands: ["open", "open-group", "abrir", "abrir-grupo"],
   usage: `${PREFIX}open`,
   /**
    * @param {CommandHandleProps} props
