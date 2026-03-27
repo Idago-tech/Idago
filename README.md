@@ -1,8 +1,6 @@
-# 🤖 Takeshi Bot
+# 🤖 Idago Bot
 
-![Takeshi Bot](./assets/images/takeshi-bot.png)
-
-[![Version](https://img.shields.io/badge/Versión-7.4.0-blue)](https://github.com/guiireal/takeshi-bot)
+![Idago Bot](./assets/images/takeshi-bot.png)
 
 > Base para bots de WhatsApp multifuncional con diversos comandos listos.
 
