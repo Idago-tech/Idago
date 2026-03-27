@@ -5,7 +5,7 @@ import { menuMessage } from "../../menu.js";
 export default {
   name: "menu",
   description: "Menu de comandos",
-  commands: ["menu", "help"],
+  commands: ["menu", "help", "comandos"],
   usage: `${PREFIX}menu`,
   /**
    * @param {CommandHandleProps} props
