@@ -8,7 +8,7 @@ import { PREFIX } from "../../config.js";
 export default {
   name: "ping",
   description:
-    "Verificar se o bot está online, o tempo de resposta e o tempo de atividade.",
+    "Verificar si el bot está online, y  tiempo de respuesta o tiempo de actividad.",
   commands: ["ping", "pong"],
   usage: `${PREFIX}ping`,
   /**
