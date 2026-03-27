@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Prefijo predeterminado de los comandos.
-export const PREFIX = [".", "/"];
+export const PREFIX = ".";
 
 // Emoji del bot (cámbielo si prefiere).
 export const BOT_EMOJI = "🕹️";
