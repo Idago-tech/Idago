@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script de actualización automática del bot
-# Autor: Dev Gui
+# Autor: Idago-tech
 # Versión: 1.0.0
 # Compatible con: VPS, WSL2 y Termux
 
@@ -313,7 +313,7 @@ cleanup() {
 }
 
 main() {
-    print_header "🤖 SCRIPT DE ACTUALIZACIÓN TAKESHI BOT"
+    print_header "🤖 SCRIPT DE ACTUALIZACIÓN TRC BOT"
     
     case $ENV_TYPE in
         termux)
