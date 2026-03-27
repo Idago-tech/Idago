@@ -97,13 +97,13 @@ cd /sdcard
 4 - Clona el repositorio.
 
 ```sh
-git clone [https://github.com/Idago-tech/takeshi-bot-espanol]
+git clone [https://github.com/Idago-tech/Idago]
 ```
 
 5 - Entra en la carpeta que fue clonada.
 
 ```sh
-cd takeshi-bot
+cd Idago
 ```
 
 6 - Habilita permisos de lectura y escritura (haz solo 1x este paso).
