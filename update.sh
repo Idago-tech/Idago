@@ -28,7 +28,7 @@ detect_environment() {
 ENV_TYPE=$(detect_environment)
 
 if [ "$ENV_TYPE" = "termux" ]; then
-    TEMP_DIR="$HOME/.cache/takeshi-bot-update"
+    TEMP_DIR="$HOME/.cache/Idago-update"
     mkdir -p "$TEMP_DIR"
 else
     TEMP_DIR="/tmp"
