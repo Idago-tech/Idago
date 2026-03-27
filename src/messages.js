@@ -7,5 +7,5 @@
  *
  * @author Dev Gui
  */
-export const welcomeMessage = "_*¡Bienvenid@ al grupo @group, @member!";
-export const exitMessage = "Vaya, @member salió de @group... ¡no te extrañaremos!";
+export const welcomeMessage = "_*¡Bienvenid@ al grupo @group, @member!*_";
+export const exitMessage = "_*Vaya, @member salió de @group... ¡no te extrañaremos!*_";
