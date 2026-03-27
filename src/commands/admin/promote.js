@@ -5,7 +5,7 @@ import { errorLog } from "../../utils/logger.js";
 export default {
   name: "promover",
   description: "Promueve a un usuario a administrador del grupo",
-  commands: ["promover", "promove", "promote", "add-adm"],
+  commands: ["promover", "promove", "promote", "admin", "add-adm", "da-admin-a"],
   usage: `${PREFIX}promover @usuario`,
   /**
    * @param {CommandHandleProps} props
